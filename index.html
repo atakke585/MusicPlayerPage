@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waveform app</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="track-container">
+            <h1 class="track-info"><span id="artist-name">Mick Gordon</span><br><br><span id="track-name">The Only Thing They Fear Is You Remix (WIP Atakke Remix)</span></h1>
+            <div class="waveform-container">
+                <div id="waveform"></div>
+            </div>
+        </div>
+        <div class="player-controls-wrap">
+            <div id="player-controls" class="paused">
+                <span class="time track-time">0:00</span>
+                <!-- <button class="player-button back"><i data-feather="skip-back"></i></button> -->
+                <button class="player-button play-pause"><i data-feather="play" class="play"></i><i data-feather="pause" class="pause"></i></button>
+                <div class="volume-controls">
+                    <button class="player-button mute"><i data-feather="volume-2" class="unmute-sound"></i><i data-feather="volume-x" class="mute-sound"></i></button>
+                    <input type="range" min="0" max="100" name="volume" value="25" id="volume">
+                    <span id="volume-value">25</span><span>%</span>
+                </div>
+                <button class="player-button stop"><i data-feather="square"></i></button>
+                <!-- <button class="player-button next"><i data-feather="skip-forward"></i></button>
+                <button class="player-button repeat"><i data-feather="repeat"></i></button> -->
+                
+                <span class="time track-lenght">99:99</span>
+            </div>
+            <!-- <input type="range" min="0" max="500" name="zoom" value="1" id="zoom"> -->
+        </div>
+
+        <!-- Song selection 
+        <div id="songselect" class="toggled">
+            <button class="song-selection-toggle">
+                <i data-feather="chevron-up" class="on-switch"></i>
+                <i data-feather="chevron-down" class="off-switch"></i>
+            </button>
+        </div> -->
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
